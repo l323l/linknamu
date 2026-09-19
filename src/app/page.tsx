@@ -2,21 +2,21 @@ import ProfileHeader from "@/components/ProfileHeader";
 import LinkCard from "@/components/LinkCard";
 
 const links = [
-  { label: "GitHub", href: "#" },
-  { label: "Blog", href: "#" },
-  { label: "Naver 메일", href: "#" },
+  { label: "🐙 깃허브", href: "https://github.com/l323l" },
+  { label: "📝 블로그", href: "https://blog.naver.com/lnkj323" },
+  { label: "✉️ 이메일", href: "mailto:jawon2517@gmail.com" },
 ];
 
 export default function Home() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-zinc-50 px-4 py-12 dark:bg-black">
-      <main className="flex w-full max-w-sm flex-col items-center gap-8">
+    <div className="flex flex-1 items-center justify-center px-6 py-16 sm:py-20">
+      <main className="flex w-full max-w-sm flex-col items-center gap-12">
         <ProfileHeader
           name="이재원"
-          bio="바이브 코더 & 디지털설계"
-          avatarInitial="이"
+          bio="풀스택 개발자 | AI 개발 & 디지털 설계에 관심 많아요"
+          avatarSrc="/profile.jpeg"
         />
-        <div className="flex w-full flex-col gap-3">
+        <div className="flex w-full flex-col gap-4">
           {links.map((link) => (
             <LinkCard key={link.label} label={link.label} href={link.href} />
           ))}
